@@ -1,0 +1,18 @@
+def cleanString(string):
+  cleanS = []
+  for c in string:
+    if c == '#':
+      if len(cleanS) > 0:
+        cleanS.pop()
+    else:
+      cleanS.append(c)
+  
+  return cleanS
+
+S = "ab#c"
+T = "ad#c"
+
+if cleanString(S) == cleanString(T):
+  print('true')
+else:
+  print('false')
